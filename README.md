@@ -11,26 +11,26 @@ buildSchemaData.php relies on some configuation to be in place before it can suc
 ##Example SchemaData and Model Classes ##
 Our assumed database schema is:
 
-*`purchase` parent table of purchase data. Has a foreign key into `api`.
-*`cc_purchase` purchases completed with a credit card. Has a foreign key into `purchase`.
-*`purchase_order`s purchases completed via a purchase order. Has a foreign key into `purchase`.
-*`api`s all purchases are tied to third-party api's. 
+* `purchase` parent table of purchase data. Has a foreign key into `api`.
+* `cc_purchase` purchases completed with a credit card. Has a foreign key into `purchase`.
+* `purchase_order`s purchases completed via a purchase order. Has a foreign key into `purchase`.
+* `api`s all purchases are tied to third-party api's. 
 
 Running buildSchemaData.php would generate the following files:
 
-*`PurchaseSchemaData.php`
-*`CcPurchaseSchemaData.php `
-*`PurchaseOrderSchemaData.php`
-*`ApiSchemaData.php`
+* `PurchaseSchemaData.php`
+* `CcPurchaseSchemaData.php `
+* `PurchaseOrderSchemaData.php`
+* `ApiSchemaData.php`
 
 All of which have column, index, foreign key, and other key details of their corresponding table.
 
 With these tables we have the models in the following files:
 
-*`Purchase.php` 
-*`CcPurchase.php`
-*`PurchaseOrder.php`
-*`Api.php`
+* `Purchase.php` 
+* `CcPurchase.php`
+* `PurchaseOrder.php`
+* `Api.php`
 
 These models each have the name of the SchemaData class they require to function, and are given that SchemaData object when created at the ```ModelFactory```.
 

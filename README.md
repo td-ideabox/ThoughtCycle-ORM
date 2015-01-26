@@ -1,5 +1,5 @@
 # ThoughtCycle ORM #
-This ORM present a novel way to manage access to a model's data. Rather than having a model limited to it's table's defined columns, these models can access their column data and the columns of any table in which they have a unique foreign key. This reduces boilerplate code and gives models ownership of their actual domain of information. Models now get and set 'fields' rather than 'columns' (as data may be across several tables).  
+This ORM presents a novel way to manage access to a model's data. Rather than having a model limited to it's table's defined columns, these models can access their column data and the columns of any table in which they have a unique foreign key. This reduces boilerplate code and gives models ownership of their actual domain of information. Models now get and set 'fields' rather than 'columns' (as data may be across several tables).  
 
 Each model instantiates a specified SchemaData when the model is itself is created in the ModelFactory. When buildSchemaData.php is executed, each table in the specified MySQL database is walked and a SchemaData class generated for it. These SchemaData classes contain all the information our Models need to work their magic. 
 
